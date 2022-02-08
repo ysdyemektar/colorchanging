@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JS-Öğreniyorum.</title>
+        <style>
+            #kutu{
+                width: 200px;
+                height: 100px;
+                line-height: 100px;
+                text-align: center;
+                font-size:20px;
+                font-family: sans-serif;
+                font-weight: bold;
+                margin-top: 25px;
+                margin-bottom: 25px;
+                border-radius: 25px 25px 25px 25px;
+                box-shadow: 4px 4px 5px grey;
+
+
+            }
+            #btn1 {
+                background: bisque;
+                text-align: center;
+                width: 100px;
+                height: 55px;
+                border-radius: 10px 10px 10px 10px;
+                box-shadow: 3px 3px 4px gray;
+                margin:  auto;
+                font-family: sans-serif;
+                position: relative;
+
+
+
+            }
+            #btn2 {
+                background: bisque;
+                text-align: center;
+                width: 100px;
+                height: 55px;
+                border-radius: 10px 10px 10px 10px;
+                box-shadow: 3px 3px 4px gray;
+                margin: auto;
+                font-family: sans-serif;
+                position: relative;
+
+            }
+            #btn3{
+                background: bisque;
+                text-align: center;
+                width: 100px;
+                height: 55px;
+                border-radius: 10px 10px 10px 10px;
+                box-shadow: 3px 3px 4px gray;
+                margin: auto;
+                font-family: sans-serif;
+                position: relative;
+
+            }
+           #btn4{
+                background: bisque;
+                text-align: center;
+                width: 100px;
+                height: 55px;
+                border-radius: 10px 10px 10px 10px;
+                box-shadow: 3px 3px 4px gray;
+                margin-left: 4px;
+                font-family: sans-serif;
+                position: absolute;
+
+           }
+        </style>
+    </head>
+    <body>
+        <br>
+        <button id="btn1">Zemini Pembe Yap</button>
+        <button id="btn2">Yazıyı Beyaz Yap </button>
+        <button id="btn3">Rastgele Renk</button>
+        <button id="btn4">Bu butonun rengini değiştir</button>
+        <div id="kutu">
+            Front-End-Developer
+        </div>
+ 
+    <script>
+        
+        var btn1=document.querySelector("#btn1");
+        var btn2=document.querySelector("#btn2");
+        var btn3=document.querySelector("#btn3");
+        var btn4=document.querySelector("#btn4");
+        var kutu=document.querySelector("#kutu");
+        
+        btn1.onclick=function(){
+            kutu.style.background="pink";//div yazı zemin rengini pembe yap
+        }
+        
+        btn2.onclick=function(){
+            kutu.style.color="#ffffff";//div yazı rengini beyaz yap
+        }
+        
+        btn3.onclick=function(){
+            
+            var kirmizi=Math.floor(Math.random()*255);
+            var yesil=Math.floor(Math.random()*255);
+            var mavi=Math.floor(Math.random()*255);
+            
+            var renk=`rgb(${kirmizi} ,${yesil}, ${mavi})`;
+            kutu.style.background=renk;
+        }
+        
+        btn4.onclick=function(){
+            this.style.background="red";// tıklanan butonun zemin rengini kırmızı yap
+            this.style.color="#ffffff";//tıklanan butonun yazı rengini beyaz yap
+        }
+        
+    </script>
+    </body>
+</html>
